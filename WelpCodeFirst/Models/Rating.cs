@@ -8,11 +8,13 @@ namespace WelpCodeFirst.Models
     public class Rating
     {
         public int RatingID { get; set; }
-        public string TextReviw { get; set; }
-        public int StarRating { get; set; }
+        public string TextReview { get; set; }
+        public short? StarRating { get; set; }
+        public int UserID { get; set; }
+        public int BusinessID { get; set; }
 
         //Navigation properties
-        public virtual ICollection<User> Users { get; set; }
-        public virtual ICollection<Business> Busninesses { get; set; }
+        public virtual User User { get; set; }
+        public virtual Business Business { get; set; }
     }
 }

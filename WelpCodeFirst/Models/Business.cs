@@ -18,13 +18,15 @@ namespace WelpCodeFirst.Models
         [MaxLength(50)]
         public string Phone { get; set; }
         public string Menu { get; set; }
+        public int BusinessTypeID { get; set; }
+        public int UserID { get; set; }
        
 
         //Navigation properties
         //used when * is pointing toward it
-        public virtual ICollection<BusinessType> BusinessTypes { get; set; }
-        public virtual ICollection<User> Users { get; set; }
-        public virtual Photo Photo { get; set; }
-        public virtual Rating Rating { get; set; }
+        public virtual BusinessType BusinessType { get; set; }
+        public virtual User User { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
+        public virtual ICollection<Rating> Ratings { get; set; }
     }
 }

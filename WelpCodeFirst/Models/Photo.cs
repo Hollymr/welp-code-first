@@ -13,7 +13,7 @@ namespace WelpCodeFirst.Models
         public string PhotoURL { get; set; }
 
         //Navigation properties
-        public virtual ICollection<User> Users { get; set; }
-        public virtual ICollection<Business> Busninesses { get; set; }
+        public virtual User User { get; set; }
+        public virtual Business Business { get; set; }
     }
 }

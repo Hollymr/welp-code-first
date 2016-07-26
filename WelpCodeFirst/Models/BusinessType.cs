@@ -13,7 +13,7 @@ namespace WelpCodeFirst.Models
         public string TypeName { get; set; }
 
         //Navigation properties
-        public virtual Business Business { get; set; }
+        public virtual ICollection<Business> Businesses { get; set; }
       
     }
 }

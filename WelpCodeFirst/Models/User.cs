@@ -7,7 +7,7 @@ using System.Web;
 namespace WelpCodeFirst.Models
 {
     public class User
-    {
+    {   // properties
         public int UserID { get; set; }
         [MaxLength(50)]
         public string UserName { get; set; }        
@@ -19,9 +19,11 @@ namespace WelpCodeFirst.Models
         public string Location { get; set; }
 
         //Navigation properties       
-        public virtual Photo Photo { get; set; }
-        public virtual Rating Rating { get; set; }
-        public virtual Business Business { get; set; }
+      
+        // each user has access to more than one rating and more than one business 
+        public virtual ICollection<Rating> Ratings { get; set; }
+        public virtual ICollection<Business> Businesses { get; set; }
+        public virtual ICollection<Photo> Photos { get; set; }
 
     }
 }
